@@ -1,0 +1,196 @@
+MACHINE LEARNING
+
+WORKSHEET–1
+
+
+In Q1 to Q7, only one option is correct, Choose the correct option:
+
+1.The value of correlation coefficient will always be:
+A) between 0 and 1
+B) greater than -1
+C) between -1 and 1
+D) between 0 and -1
+
+Answer: C) between -1 and 1
+
+2.Which of the following cannot be used for dimensionality reduction?
+A) Lasso Regularisation
+B) PCA
+C) Recursive feature elimination
+D) Ridge Regularisation
+
+Answer: C) Recursive feature elimination  
+
+3.Which of the following is not a kernel in Support Vector Machines?
+A) linear
+B) Radial Basis Function
+C) hyperplane
+D) polynomial
+
+Answer: C) hyperplane 
+
+4.Amongst the following, which one is least suitable for a dataset having non-linear decision boundaries?
+A) Logistic Regression
+B) Naïve Bayes Classifier
+C) Decision Tree Classifier
+D) Support Vector Classifier
+
+Answer: C) Decision Tree Classifier   
+
+5.In a Linear Regression problem, ‘X’ is independent variable and ‘Y’ is dependent variable, where ‘X’ represents weight in pounds. 
+  If you convert the unit of ‘X’ to kilograms, then new coefficient of ‘X’ will be? (1 kilogram = 2.205 pounds)
+A) 2.205×old coefficient of ‘X’
+B) same as old coefficient of ‘X’
+C) old coefficient of ‘X’ ÷2.205
+D) Cannot be determined
+
+Answer: A) 2.205×old coefficient of ‘X’ 
+
+6.As we increase the number of estimators in ADABOOST Classifier, what happens to the accuracy of the model?
+A) remains same
+B) increases
+C) decreases
+D)none of the above
+
+Answer: B) increases
+
+7.Which of the following is not an advantage of using random forest instead of decision trees?
+A) Random Forests reduce overfitting
+B) Random Forests explains more variance in data then decision trees
+C) Random Forests are easy to interpret
+D) Random Forests provide a reliable feature importance estimate
+
+Answer: C) Random Forests are easy to interpret   
+
+
+
+In Q8 to Q10, more than one options are correct, Choose all the correct options:
+
+
+8.Which of the following are correct about Principal Components?
+A) Principal Components are calculated using supervised learning techniques
+B) Principal Components are calculated using unsupervised learning techniques
+C) Principal Components are linear combinations of Linear Variables.
+D) All of the above
+
+Answer: D) All of the above 
+
+9.Which of the following are applications of clustering?
+A) Identifying developed, developing and under-developed countries on the basis of factors like GDP, poverty index, employment rate, population and living index
+B) Identifying loan defaulters in a bank on the basis of previous years’ data of loan accounts.
+C)Identifying spam or ham emails
+D) Identifying different segments of disease based on BMI, blood pressure, cholesterol, blood sugar levels
+
+Answer: A) Identifying developed, developing and under-developed countries on the basis of factors like GDP, poverty index, employment rate, population and living index
+        B) Identifying loan defaulters in a bank on the basis of previous years’ data of loan accounts.
+        C)Identifying spam or ham emails
+        D) Identifying different segments of disease based on BMI, blood pressure, cholesterol, blood sugar levels
+
+10.Which of the following is(are) hyper parameters of a decision tree?
+A) max_depth
+B) max_features
+C) n_estimators
+D) min_samples_leaf
+
+Answer: A) max_depth
+        B) max_features
+        D) min_samples_leaf
+
+
+
+Q10 to Q15 are subjective answer type questions, Answer them briefly
+
+11.What are outliers? Explain the Inter Quartile Range(IQR) method for outlier detection.
+ 
+A value that "lies outside the" (much smaller or larger than given range) most of the other values in a set of data.
+For example in the scores 26,28,2,31,84,32,29,25 both 2 and 84 are "outliers".
+The IQR is calculated as the difference between the 75th and the 25th percentiles of the data and defines the box in a box and whisker plot.
+Percentiles can be calculated by sorting the observations and selecting values at specific indices. The 50th percentile is the middle value, 
+or the average of the two middle values for an even number of examples. If we had 10,000 samples, then the 50th percentile would 
+be the average of the 5000th and 5001st values.
+We refer to the percentiles as quartiles (“quart” meaning 4) because the data is divided into four groups via the 25th, 50th and 75th values.
+The IQR defines the middle 50% of the data, or the body of the data.
+The IQR can be used to identify outliers by defining limits on the sample values that are a factor k of the IQR 
+below the 25th percentile or above the 75th percentile. The common value for the factor k is the value 1.5. 
+A factor k of 3 or more can be used to identify values that are extreme outliers or “far outs” when described 
+in the context of box and whisker plots.
+We can calculate the percentiles of a dataset using the percentile() NumPy function that takes the 
+dataset and specification of the desired percentile. The IQR can then be calculated as the difference 
+between the 75th and 25th percentiles.
+
+
+12.What is the primary difference between bagging and boosting algorithms?
+
+Bagging and boosting both are ensemble methods. Weak learners are combined to make a strong learner for predict better result or performance.
+Ensemble methods combination many decision trees classifiers to generate better prediction than a single DTC (decision tree classifier).
+ 
+The Basic principle of ensemble is that a group of weak learners make together to form a strong learner, for increasing the accuracy of the model.
+Using Bagging and Boosting helps to decrease the variance and increased the robustness of the model. Combinations of
+ multiple classifiers decrease variance, especially in the case of unstable classifiers, and may produce a more 
+reliable classification than a single classifier.
+
+Bagging: It is the method to decrease the variance of model by generating additional data for training
+ from your original data set using combinations with repetitions to produce multi sets of the same size
+ as your original data.
+
+Boosting: It helps to calculate the predict the target variables using different models and then average
+ the result (may be using a weighted average approach).
+
+1. In Bagging model each model is built separately where in Boosting new model is some where
+   influenced by performance of previous built models.
+2. Bagging tried to solve over fitting problems where Boosting tried to reduce the bias.
+3. In Bagging model each model is receives equal weight where Boosting models are weighted
+   according to their performance.
+4. In Bagging is the simple way to combining predictions that belongs to the same type while
+   Boosting is a way of combining predictions that belong to the different types.
+5. Bagging is extended to Random forest model while Boosting is extended to Gradient boosting.
+6. In bagging model is apply if the classifier is unstable (high variance) and we apply boosting
+   model If the classifier is stable and simple (high bias).
+7. Bagging technique is projected to decrease the variance, not bias on the other side Boosting
+   targets to decrease bias, not variance.
+	
+If the difficulty of the single model is over-fitting, then Bagging is the best option. Boosting for its part
+ doesn’t help to avoid over-fitting; in fact, this technique is faced with this problem itself. 
+For this reason, Bagging is effective more often than Boosting.
+
+
+
+13.Whatis adjusted R2 in logistic regression. How is it calculated?
+
+R-squared is a statistical measure of how close the data are to the fitted regression line. 
+It is also known as the coefficient of determination, or the coefficient of multiple determination for multiple regression.
+The definition of R-squared is fairly straight-forward; it is the percentage of the response variable 
+variation that is explained by a linear model. Or:
+R-squared = Explained variation / Total variation
+R-squared is always between 0 and 100%:
+• 0% indicates that the model explains none of the variability of the response data around its mean.
+• 100% indicates that the model explains all the variability of the response data around its mean.
+
+
+14.What is the difference between standardisation and normalisation?
+
+Both comes under feature engineering  
+standardization Scale down your feature based on Standard normal distribution. it transforms 
+data to have a mean of zero and a standard deviation of 1. This standardization is called a z-score
+
+Normalization usually means to scale a variable to have a values between 0 and 1.
+
+15.What is cross-validation? Describe one advantage and one disadvantage of using cross-validation.
+
+Cross-validation is a technique in which we train our model using the subset of the data-set and then evaluate 
+using the complementary subset of the data-set.
+
+The k-fold cross-validation procedure is a standard method for estimating the performance of a 
+machine learning algorithm or configuration on a dataset.
+A single run of the k-fold cross-validation procedure may result in a noisy estimate of model 
+performance. Different splits of the data may result in very different results.
+Repeated k-fold cross-validation provides a way to improve the estimated performance of a machine learning model. 
+This involves simply repeating the cross-validation procedure multiple times and reporting the 
+mean result across all folds from all runs. This mean result is expected to be a more accurate 
+estimate of the true unknown underlying mean performance of the model on the dataset, as calculated using the standard error.
+
+Reduces Overfitting: In Cross Validation, we split the dataset into multiple folds and train the 
+algorithm on different folds. This prevents our model from overfitting the training dataset.
+
+Increases Training Time: Cross Validation drastically increases the training time. Earlier you had 
+to train your model only on one training set, but with Cross Validation you have to train your model on multiple training sets.
