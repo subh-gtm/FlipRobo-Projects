@@ -1,0 +1,144 @@
+WEBSCRAPING
+WORKSHEET – 1
+
+In Q1 to Q9, only one option is correct, Choose the correct option:
+
+1. Which of the following extracts information from user generated content?
+A) Java script tagging			B) Web scraping
+C) A/B testing				D) MROCs
+
+Answer 1: B
+
+2. Which of the following is not a web scraping library in python?
+A) selenium				B) Beautiful soup
+C) Requests				C) scrappy
+
+Answer 2: C
+
+3. Selenium tests __________?
+A) Browser based applications		B) DOS applications
+C) GUI applications			D) All of the above
+
+Answer 3: D
+
+4. Task of crawling is performed by a complex software which is known as:
+A) Scraper				B) Crawler	
+C) Boat					D) Spider
+
+Answer 4: C
+
+5. Which of the following commands is used to access name of a tag in Beautiful Soup?
+A) tag.attrs				B) tag.name
+C) tag,id				D) tag[‘id’]
+
+Answer 5: D
+
+6. Which of the following is the default parser in Beautiful Soup?
+A) html.parser				B) html5lib
+C) lxml					D)lxml-xml
+
+Answer 6: C
+
+7. In selenium the webdriver is used to?
+A) design a test using selenese
+B) test a web application on firefox only
+C) execute tests on HtmlUnit browser
+D) to download any content from a webpage
+
+Answer 7: B
+
+8. In selenium, driver.find_elements_by_xpath(‘given xpath’)returns:
+A) the first webelement associated with the ‘given xpath’
+B) the url of first webelement associated with the ‘given xpath’
+C) the list of all webelements associated with the ‘given xpath’
+D) all the attributes of the first webelement associated with the ‘given xpath’
+
+Answer 8: D
+
+9. The script ‘window.scrollBy(0,a) scrolls the webpage by?
+A) ‘a’ number of horizontal spaces
+B) ‘a’ number of lines
+C) ‘a’ number of pixels horizontally
+D) ‘a’ number of pixels vertically
+
+Answer 9: D
+
+
+In Q10, more than one options are correct, Choose all the correct options:
+
+10. Which of the following is(are) tags of HTML?
+A)<a>					B) <b>
+C) <image>				D) <href>
+
+Answer 10: A,B,D
+
+
+
+Q10 to Q13 are subjective answer type questions, Answer them briefly.
+
+11. What is the main difference between a web scraper and a web crawler?
+
+Answer: Web crawling: It is the process of repetitively finding and fetching hyperlinks starting from a list of starting URLs. Briefly we can say that it is the process of locating information on world wide web, indexing all the words in a document, adding them to a database, then following all hyper links and indexes and adds that information also to the database. 
+A web crawler is a software program that visits websites and reads their pages and other related information in order to build entries for a search engine index. The major search engines like Google, Yahoo, Bing etc on the Web all have such a program, which is also known as a “web spider” or “bot.”
+
+Web scraping is the process which  automatically requesting a web document and collecting information from it. Strictly speaking, to do web scraping, you have to do some degree of web crawling to move around the websites. Web Scraping is essentially targeted at specific websites for specific data, e.g. for stock market data, business leads, supplier product scraping and this are mostly provided by web scraping service provider.
+
+12. What is ‘robots.txt’ file? What is the use of ‘robots.txt’ file?
+
+Answer : A robots.txt file tells search engine crawlers which pages or files the crawler can or can't request from your site. This is used mainly to avoid overloading your site with requests; it is not a mechanism for keeping a web page out of Google.
+Robot.txt is also manage crawl traffic and Stop media files that is images, audio files, video from appearing in Google search result it won't prevent other users and pages which is linked to your media files.
+It also block resource such as very unimportant scripts, Image files. In the absence of these resources it is hard for Google crawler to understand the page.
+For web pages (HTML, PDF, or other file format which google can read), robots.txt can be used to manage crawling traffic if we think our server will be overwhelmed by requests from Google's crawler, or to avoid crawling unimportant or similar pages on our site. We should not use robots.txt as a means to hide your web pages from Google Search results. 
+
+13. What are static and dynamic web pages?
+
+Answer: Static type of a webpage is a very basic type. In static web page the content is fixed page is coded in HTML and content to every user is display same static web page is most basic type and easiest to create. It does not require any web programming or any database design. Static web page have fixed quote and the content does not change unless someone is manually updated it is used for small websites.
+
+Dynamic types of web page display a different content each and every time by different user. The best example of dynamic type web pages are shopping websites they are updated very frequently. When the information displayed on the dynamic page might vary depending on who is looking at it or what type of information required to display the page property is stored in a database like my SQL.
+
+
+Q14 and Q15 are programming practice questions. Solve it using JUPYTER NOTEBOOK and paste the solution in your answer sheets.
+
+14. Write a python program to check whether a webpage contains a title or not.
+
+from selenium import webdriver 
+import requests
+from bs4 import BeautifulSoup
+import re
+
+driver=webdriver.Chrome() 
+
+url="http://upbed.nic.in/UPBEDAPP/UPBEDRegistration.aspx"
+
+driver.get(url) 
+
+
+wp_title = driver.title 
+
+
+if title==wp_title:
+    print(title)
+else:
+    print("No Title")
+
+
+15. Write a python program to access the search bar and search button on images.google.com.
+
+from selenium import webdriver
+#from bs4 import BeautifulSoup
+import requests
+
+#driver=webdriver.Chrome("chromedriver.exe")
+#url=https://images.google.com/?gws_rd=ssl
+#res=requests.get(url=url)
+#url="https://images.google.com/?gws_rd=ssl"
+
+user_input = input("Search in Google: ") 
+user_input = user_input.replace(' ', '+')
+driver=webdriver.Chrome("chromedriver.exe")
+for i in range(1):
+    search_images=driver.get("https://www.google.co.in/imghp?hl=en&tab=wi&ogbl"+user_input + "&start=" + str(i))
+
+
+
+
